@@ -10,8 +10,8 @@ const App = () => {
     const [clickedCards,setClickedCards] = useState([]);
     const [loading,SetLoading] = useState(false);
 
-    const publicKey = '6ab7413758ef9e25325325ee4a88d6d0';
-    const privateKey = '1ca9ac118fdc404992685e5e3c1c02594c66462d';
+    const publicKey = import.meta.env.VITE_PUBLIC_API_KEY;
+    const privateKey = import.meta.env.VITE_PRIVATE_API_KEY;
     const ts = Date.now().toString();
     const hash = CryptoJS.MD5(ts+privateKey+publicKey).toString();
     const API_URL = `https://gateway.marvel.com/v1/public/characters?limit=20&ts=${ts}&apikey=${publicKey}&hash=${hash}&series=24229`;
