@@ -74,7 +74,7 @@ const App = () => {
             {loading? <div className="loading-container">
                 <div className="loader"></div>
             </div>:<MemoryCard images={images} score={score} clickedCards={clickedCards} handleCardClick={handleCardClick}/>}
-            
+            <p style={{textAlign:'center',color:'white'}}>Data provided by Marvel. © 2014 Marvel</p>
         </>
      );
 }
